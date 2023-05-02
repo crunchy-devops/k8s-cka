@@ -6,4 +6,4 @@ spec:
   containers:
     - name: stress-ng
       image: ghcr.io/colinianking/stress-ng
-      args: [ '--all', '4' ,'--timeout', '10m']
+      args: [ '--all', '1' ,'--timeout', '10m']

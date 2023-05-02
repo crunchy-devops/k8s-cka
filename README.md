@@ -88,13 +88,14 @@ kubectl get svc nginx
 kubectl get ep nginx
 kubectl describe pod nginx-xxxx | grep Node:
 k get pod -o wide
-kubectl scale deployment nginx --replicas=3
+kubectl scale deployment nginx --replicas=5
 # arreter tous les pods
 kubectl scale deployment nginx --replicas=0
 kubectl get deployment nginx
 k get ep nginx
 kubectl exec nginx-xxxxxx -- printenv |grep KUBERNETES
 kubectl delete svc nginx
+kubectl port-forward service/nginx 32343:80 --address='0.0.0.0'
 kubectl expose deployment nginx --type=NodePort
 kubectl get svc
 k get svc -A

@@ -26,4 +26,4 @@ Tapez l'adresse IP de votre cluster et le port d'ecoute de votre dashboard.
 ou attendez d'obtenir une adresse de kubernetes  
 Comme vous n'avez pas de certificat SSL valide il faut forcer la connexion dans votre navigateur.
 
-
+kubectl port-forward -n kubernetes-dashboard  service/kubernetes-dashboard 30335:443 --address='0.0.0.0'
