@@ -14,7 +14,7 @@ Three sort of taints : Noschedule, PreferNoSchedule and NoExecute
 # pre-requisites
 #docker ps | wc -l
 cd lab-taint-tolerations
-k get podk exec -it shell-demo -- /bin/bash -c 'cat /etc/cars/car.make'
+k  exec -it shell-demo -- /bin/bash -c 'cat /etc/cars/car.make'
 k create -f taint.yaml 
 k get pod
 k get pod -o wide

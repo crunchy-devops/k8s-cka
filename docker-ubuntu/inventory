@@ -1,3 +1,6 @@
 [local]
 localhost ansible_connection=local ansible_ssh_user=ubuntu
+[ubuntuvm]
+master ansible_host=10.128.15.223 ansible_ssh_user=yoann ansible_ssh_private_key=/home/yoann/.ssh/id_rsa
+node   ansible_host=10.128.15.224 ansible_ssh_user=yoann ansible_ssh_private_key=/home/yoann/.ssh/id_rsa
 
