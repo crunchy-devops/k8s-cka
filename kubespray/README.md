@@ -33,7 +33,7 @@ source venv/bin/activate  # activate the virtualenv python
 pip3 install -r requirements.txt 
 # Copy ``inventory/sample`` as ``inventory/mycluster``
 cp -rfp inventory/sample inventory/mycluster
-declare -a IPS=( 10.128.15.223 10.128.15.224 )
+declare -a IPS=( 10.128.15.233 10.128.15.234 )
 CONFIG_FILE=inventory/mycluster/hosts.yaml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
 
