@@ -95,7 +95,7 @@ kubectl get deployment nginx
 k get ep nginx
 kubectl exec nginx-xxxxxx -- printenv |grep KUBERNETES
 kubectl delete svc nginx
-kubectl port-forward service/nginx 32343:80 --address='0.0.0.0'
+#kubectl port-forward service/nginx 32343:80 --address='0.0.0.0'
 kubectl expose deployment nginx --type=NodePort
 kubectl get svc
 k get svc -A

@@ -12,13 +12,13 @@ cd bin
 ./etcdctl put key1 value1
 ./etcdctl get key1
 ```
-
-```scp etcdctl ubuntu@master:/home/ubuntu``` 
-
-## Si vous avez acces au master, vous pouvez voir les donnees de la base ETCD
+## Copy etcdctl on the master
 ```shell
-sudo ETCDCTL_API=3 ./etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt \
---cert /etc/kubernetes/pki/etcd/server.crt \
---key /etc/kubernetes/pki/etcd/server.key get / --prefix --keys-only
+scp .ssh/id_rsa 10.128.15.222:/home/ubuntu/.ssh/id_rsa
+scp 10.128.15.222:/home/ubuntu/etcd-3.5.0/bin/etcdctl .
 ```
 
+## On the master, enter this line for getting ectd key name of kubernetes objects
+```shell
+sudo ETCDCTL_API=3 etcdctl --endpoints https://127.0.0.1:2379 --cert=/etc/ssl/etcd/ssl/node-master-1.pem --key=/etc/ssl/etcd/ssl/node-master-1-key.pem --cacert=/etc/ssl/etcd/ssl/ca.pem get / --prefix --keys-only
+```
