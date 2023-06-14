@@ -1,4 +1,4 @@
-# Imperative et Declarative Commandees
+# Imperative et Declarative Commandes
 ## Imperative command for creating a pod
 ```shell
 k run nginx --image=nginx  --port=8080

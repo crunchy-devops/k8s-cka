@@ -14,4 +14,4 @@ spec:
 #              name: colors
       envFrom:
         - configMapRef:
-            name: colors
+           name: colors
